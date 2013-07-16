@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <title>Printer Status</title>
+		<script type='text/javascript' src='AppleClasses/AppleButton.js'></script>
+		<script type='text/javascript' src='AppleClasses/AppleInfoButton.js'></script>
+		<script type='text/javascript' src='AppleClasses/AppleAnimator.js'></script>
+		<script type='text/javascript' src='PrinterStatus.js'></script>
+        <style type="text/css">
+            @import "PrinterStatus.css";
+        </style>
+    </head>
+
+    <body onload="runSetup()">
+
+        <div id="front">
+            <h4 id="printerName"></h4>
+            <img src="images/printer.png" id="printerIcon" />
+
+            <div id="status">
+                Status: <span id="statusMessage">Unknown</span>
+            </div>
+
+            <div id="printerInfo">
+                <div id="labels">
+                    Paper Tray 1<br />
+                    Paper Tray 2<br />
+                    Paper Tray 3<br />
+                    Toner Level:<br />
+                    Maintenance Kit: <br />
+                </div>
+                
+                <div id="data">
+                    <span id="tray1Value"></span> <br />
+                    <span id="tray2Value"></span> <br />
+                    <span id="tray3Value"></span> <br />
+                    <span id="tonerValue"></span> <br />
+                    <span id="maintenanceKitValue"></span> <br />
+                </div>
+
+            </div>
+            <div id="flipper"></div>
+        </div>
+        
+        <div id="back">
+
+            <h2>LaserJet 4300 Status Widget</h2>
+            <p>Enter the IP of the printer you want to query.</p>
+
+            <form name="printerForm" onSubmit="setPrinterIP(this.printerIP.value); showFront()">
+            <input type="text" name="printerIP" value="0.0.0.0" onfocus="clearForm(this)" id="printerIP" />
+            <input type="checkbox" name="ignoreTray1" checked="true" id="ignoreTray1" />
+            <span id="ignoreTray1Text">Ignore when tray 1 is empty?</span>
+            </form>
+
+            <div id="doneButton"></div>
+
+            <div id="credits">Created by <a href="javascript: openLink('http://mattdanger.net')">Matt West</a> on 3/13/2007.</div>
+        </div>
+
+    </body>
+</html>

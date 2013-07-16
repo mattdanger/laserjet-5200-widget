@@ -1,0 +1,154 @@
+
+/********************************************************
+* Title:    HP LaserJet Status Widget
+* Author:   Matt West, mattdanger.net
+* Date:     3/13/2007
+********************************************************/
+
+body {
+	margin: 0;
+    font-family: "Lucida Grand";
+    color: #CCC;
+}
+
+#front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 170px;
+	width: 320px;
+	background-image: url("Default.png");
+	background-repeat: no-repeat;
+}
+
+#front h4 {
+    position: absolute;
+    top: -5px;
+    left: 27px;
+    font-size: 12pt;
+}
+
+p {
+    margin: 0;
+    padding: 5px;
+    font-size: 10pt;
+}
+
+.faderDiv {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+}
+
+
+#printerIcon {
+    position: absolute;
+    left: 20px;
+    top: 55px;
+}
+
+#status {
+    font-size: 10pt;
+    position: absolute;
+    top: 35px;
+    right: 28px;
+}
+
+#printerInfo {
+    position: absolute;
+    left: 100px;
+    top: 55px;
+    background: url('images/statsBg.png');
+    width: 200px;
+    height: 90px;
+}
+
+#labels {
+    font-size: 8pt;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#data {
+    font-size: 8pt;
+    position: absolute;
+    top: 10px;
+    left: 125px;
+}
+
+/*
+ ********************
+ * Flipper controls *
+ ********************
+ */
+#flipper {
+	position: absolute;
+	left: 290px; 
+	top: 135px;
+	width: 13px;
+	height: 13px;
+}
+
+/*
+ ***************
+ * Widget Back *
+ ***************
+ */
+#back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 170px;
+    width: 320px;
+    background-image: url("Back.png");
+    background-repeat: no-repeat;
+    display: none;
+}
+
+#back h2 {
+    position: absolute;
+    font-size: 12pt;
+    top: 5px;
+    left: 25px;
+}
+
+#back p {
+    position: absolute;
+    font-size: 9pt;
+    top: 48px;
+    left: 35px;
+}
+
+#printerIP {
+    position: absolute;
+    top: 70px;
+    left: 55px;
+}
+
+#doneButton {
+    position: absolute;
+    top: 70px;
+    left: 210px;
+}
+
+#ignoreTray1 {
+    position: absolute;
+    top: 95px;
+    left: 54px;
+}
+
+#ignoreTray1Text {
+    font-size: 8pt;
+    position: absolute;
+    top: 98px;
+    left: 75px;
+}
+
+#credits {
+    font-size: 7pt;
+    position: absolute;
+    top: 135px;
+    left: 20px;
+}
